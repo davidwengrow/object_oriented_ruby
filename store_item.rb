@@ -1,6 +1,7 @@
-
+require "./store_item_module.rb"
 
 class Flowers
+  include Sniffing
   attr_reader :color
   attr_writer :color
   def initialize (input_color, input_price, input_type)
@@ -20,3 +21,4 @@ flower3 = Flowers.new("purple", 10, "orchid")
 
 p flower1
 p flower1.color
+flower1.dont_eat
